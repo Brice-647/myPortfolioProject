@@ -99,8 +99,6 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
-<script src="slideshow.js"></script>
-
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! My name is Brice Puthoff, a software developer with a passion for creating beautiful and functional projects. I am a full-time student majoring in software development. The main languages I utilize include HTML, CSS, JavaScript, Java, C#, and Python. I enjoy tackling complex problems and transforming ideas into practical solutions through clean, efficient code. Beyond just programming, I love spending time with friends and family, playing fetch with my dog, and traveling the world!</p>
@@ -132,12 +130,45 @@
 
 
 
+
+
+
+     <script>
+        let slideIndex = 0;
+        showSlides();
+
+        // Manual controls
+        function plusSlides(n) {
+            slideIndex += n - 1; // adjust because showSlides() increments
+            showSlides();
+        }
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block"; 
+
+            // Auto slideshow (uncomment to enable)
+            // setTimeout(showSlides, 2000);
+        }
+    </script>
+
 <br><br><br><br>
         <footer>
         <p>&copy; 2024 Brice Puthoff. All rights reserved.</p>
     </footer>    
     </body>
 </html>
+
 
 
 
