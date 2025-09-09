@@ -16,11 +16,12 @@ function showSlides() {
   }
 
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
 
-  slides[slideIndex-1]
+  slides[slideIndex - 1].style.display = "block"; // <-- this was missing
 
-  // Change image every 2 seconds
+  // Auto slideshow (uncomment if you want autoplay)
   // setTimeout(showSlides, 2000);
 }
-
