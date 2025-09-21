@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #333333;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 header {
@@ -55,6 +55,10 @@ footer {
     left: 0;
 }
 
+
+
+
+/* Slideshow styles */
 * {box-sizing:border-box}
 
 .slideshow-container {
